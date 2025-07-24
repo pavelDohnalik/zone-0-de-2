@@ -3,7 +3,7 @@
 <html lang="cs">
 <head>
 <meta charset="UTF-8">
-<title>Aktivační terminál</title>
+<title>Aktivierungsterminal</title>
 <style>
   body { background-color: black; color: lime; font-family: monospace; text-align: center; padding-top: 50px; }
   input, button { font-size: 1.2em; padding: 10px; margin-top: 20px; }
@@ -11,11 +11,12 @@
 </style>
 </head>
 <body>
-<h2>🔐 AKTIVAČNÍ TERMINÁL ZÓNA 0</h2>
-<p>Zadejte přístupový kód pro spuštění reaktoru:</p>
-<input type="text" id="codeInput" placeholder="Zadej kód">
+<h2>🔐 AKTIVIERUNGSTERMINAL ZONE 0</h2>
+<p>Geben Sie den Zugangscode zur Reaktoraktivierung ein:
+</p>
+<input type="text" id="codeInput" placeholder="Code eingeben">
 <br>
-<button onclick="checkCode()">ODESLAT</button>
+<button onclick="checkCode()">SENDEN</button>
 <div id="output"></div>
 
 <script>
@@ -23,9 +24,9 @@ function checkCode() {
   var code = document.getElementById("codeInput").value.trim().toUpperCase();
   var output = document.getElementById("output");
   if (code === "NEBEL-KERN") {
-    output.innerHTML = "✅ Reaktor aktivován. Probíhá dekontaminace...";
+    output.innerHTML = "✅ Reaktor aktiviert. Dekontamination läuft...";
   } else {
-    output.innerHTML = "❌ Neplatný kód. Přístup zamítnut.";
+    output.innerHTML = "❌ Ungültiger Code. Zugriff verweigert.";
   }
 }
 </script>
