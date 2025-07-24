@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Aktivační terminál</title>
+<style>
+  body { background-color: black; color: lime; font-family: monospace; text-align: center; padding-top: 50px; }
+  input, button { font-size: 1.2em; padding: 10px; margin-top: 20px; }
+  #output { margin-top: 30px; font-size: 1.3em; }
+</style>
+</head>
+<body>
+<h2>🔐 AKTIVAČNÍ TERMINÁL ZÓNA 0</h2>
+<p>Zadejte přístupový kód pro spuštění reaktoru:</p>
+<input type="text" id="codeInput" placeholder="Zadej kód">
+<br>
+<button onclick="checkCode()">ODESLAT</button>
+<div id="output"></div>
+
+<script>
+function checkCode() {
+  var code = document.getElementById("codeInput").value.trim().toUpperCase();
+  var output = document.getElementById("output");
+  if (code === "OMEGA-42") {
+    output.innerHTML = "✅ Reaktor aktivován. Probíhá dekontaminace...";
+  } else {
+    output.innerHTML = "❌ Neplatný kód. Přístup zamítnut.";
+  }
+}
+</script>
+</body>
+</html>
